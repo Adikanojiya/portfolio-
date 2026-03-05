@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aditya | DevOps Portfolio</title>
+
+<style>
+@keyframes glow{0%{text-shadow:0 0 10px #22d3ee;} 50%{text-shadow:0 0 20px #ec4899;} 100%{text-shadow:0 0 10px #22d3ee;}}
+@keyframes float{0%{transform:translateY(0);} 50%{transform:translateY(-15px);} 100%{transform:translateY(0);}}
+@keyframes slideIn{from{opacity:0;transform:translateX(-50px);} to{opacity:1;transform:translateX(0);}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(34,211,238,0.7);} 70%{box-shadow:0 0 0 20px rgba(34,211,238,0);}}
+
+@keyframes bgMove{0%{background-position:0 0;}100%{background-position:200% 200%;}}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI, sans-serif}
+body{position:relative;background:linear-gradient(135deg,#0f172a,#1a1f3a);background-size:200% 200%;animation:bgMove 30s ease infinite;color:#e2e8f0;scroll-behavior:smooth}
+
+body::after{
+  content:'';
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><circle cx="10" cy="10" r="2" fill="#fff" opacity="0.3"/><circle cx="50" cy="60" r="1" fill="#fff" opacity="0.2"/><circle cx="120" cy="30" r="1.5" fill="#fff" opacity="0.25"/></svg>') repeat;
+  opacity:0.04;
+  pointer-events:none;
+  animation:bgMove 60s linear infinite;
+}
+
+header{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:linear-gradient(135deg,#0f172a 0%,#1e1b4b 50%,#0f172a 100%);
+  position:relative;
+  overflow:hidden;
+}
+
+header::before{ 
+  content:'';
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:radial-gradient(circle,#ec4899,transparent);
+  border-radius:50%;
+  top:10%;
+  right:10%;
+  opacity:0.1;
+  animation:float 6s ease-in-out infinite;
+}
+
+header::after{
+  content:'';
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:radial-gradient(circle,#22d3ee,transparent);
+  border-radius:50%;
+  bottom:10%;
+  left:10%;
+  opacity:0.1;
+  animation:float 8s ease-in-out infinite;
+}
+
+header h1{
+  font-size:65px;
+  background:linear-gradient(90deg,#22d3ee,#38bdf8,#ec4899,#a855f7);
+  -webkit-background-clip:text;
+  color:transparent;
+  animation:glow 3s ease-in-out infinite; 
+  position:relative;
+  z-index:1;
+  font-weight:900;
+}
+
+header p{margin-top:15px;font-size:22px;color:#a1e3ff;font-weight:500;position:relative;z-index:1;}
+
+.btn{  
+  margin-top:25px;
+  padding:14px 35px;
+  border:2px solid #22d3ee;
+  border-radius:30px;
+  cursor:pointer;
+  font-weight:bold;
+  background:linear-gradient(135deg,#22d3ee,#0ea5e9);
+  color:black;
+  transition:.4s;
+  position:relative;
+  z-index:1;
+  font-size:16px;
+  box-shadow:0 0 20px rgba(34,211,238,0.3);
+  animation:pulse 2s infinite;
+}
+
+.btn:hover{transform:scale(1.1);background:linear-gradient(135deg,#ec4899,#a855f7);border-color:#ec4899;box-shadow:0 0 30px rgba(236,72,153,0.5)}
+
+section{padding:80px 10%;position:relative;z-index:1}  
+section:nth-child(odd){background:rgba(22,163,226,0.02)}
+
+/* small floating circles for visual interest */
+section::before{content:'';position:absolute;top:10%;left:5%;width:60px;height:60px;border-radius:50%;background:rgba(34,211,238,0.1);animation:float 12s ease-in-out infinite;}
+section::after{content:'';position:absolute;bottom:15%;right:10%;width:80px;height:80px;border-radius:50%;background:rgba(236,72,153,0.1);animation:float 14s ease-in-out infinite;}
+
+h2{
+  margin-bottom:40px;
+  font-size:42px;
+  background:linear-gradient(90deg,#22d3ee,#ec4899);
+  -webkit-background-clip:text;
+  color:transparent;
+  font-weight:800;
+  animation:slideIn 0.8s ease;
+}   
+
+.card{
+  background:linear-gradient(135deg,#1e293b,#334155);
+  padding:30px;
+  border-radius:20px;
+  margin-bottom:20px;
+  transition:.4s;
+  border:2px solid transparent;
+  box-shadow:0 8px 32px rgba(0,0,0,0.3);
+  position:relative;
+  overflow:hidden;
+}
+
+.card::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:linear-gradient(90deg,transparent,rgba(34,211,238,0.2),transparent);
+  transition:.6s;
+}
+
+.card:hover{
+  transform:translateY(-12px);
+  background:linear-gradient(135deg,#22d3ee,#a855f7);
+  box-shadow:0 15px 40px rgba(34,211,238,0.3);
+  color:#000;
+}
+
+.card:hover::before{left:100%}
+
+.card h3{color:#22d3ee;margin-bottom:15px;font-size:24px}
+.card:hover h3{color:#000}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
+
+.skill-bar{margin-bottom:25px}
+.skill-bar span{display:block;margin-bottom:8px;font-weight:600;color:#a1e3ff}
+.progress{
+  background:#334155;
+  height:12px;         
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:inset 0 2px 4px rgba(0,0,0,0.3);
+}
+.progress div{
+  height:12px;
+  border-radius:10px;
+  background:linear-gradient(90deg,#22d3ee,#ec4899);
+  animation:slideIn 1.5s ease;
+  box-shadow:0 0 15px rgba(34,211,238,0.5);
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  background:linear-gradient(135deg,#1e293b,#0f172a);
+  color:#94a3b8;
+  border-top:2px solid #22d3ee;
+}
+
+.flow{display:flex;flex-wrap:wrap;gap:15px;margin-top:15px}
+.flow div{
+  background:linear-gradient(135deg,#22d3ee,#0ea5e9);
+  color:#000;
+  padding:12px 18px;
+  border-radius:12px;
+  font-size:14px;
+  font-weight:600;
+  box-shadow:0 4px 15px rgba(34,211,238,0.2);
+  transition:.3s;
+  animation:slideIn 0.8s ease;
+}
+
+.flow div:hover{
+  transform:translateY(-5px);
+  box-shadow:0 8px 25px rgba(34,211,238,0.4);
+  background:linear-gradient(135deg,#ec4899,#a855f7);
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Aditya Kanojiya</h1>
+<p>I Build, Containerize & Deploy Cloud Applications</p>
+<button class="btn" onclick="scrollToSection('projects')">View Projects</button>
+</header> 
+
+<section>
+<h2>About Me</h2>
+<div class="card">
+<p>Final-year engineering student passionate about DevOps and cloud technologies. Currently learning Linux, Docker, Kubernetes and AWS through hands-on tutorials and personal projects.</p>
+<p>Recently completed several capstone assignments including building and deploying a containerized web app and automating infrastructure setup with scripts. Eager to apply these skills in real-world scenarios.</p>
+<p>I enjoy exploring new tools, reading tech blogs, and participating in hackathons. Looking forward to starting my career as a DevOps fresher where I can grow with a supportive team.</p>
+</div>
+</section>
+
+<section>
+<h2>DevOps Deployment Flow</h2>
+<div class="flow">
+<div>Developer</div> u 
+<div>GitHub</div>
+<div>Docker Build</div>
+<div>Docker Hub</div>
+<div>AWS EC2</div>
+<div>Nginx</div>
+<div>Users</div>
+</div>
+</section>
+
+<section>
+<h2>Featured Projects</h2>
+<div class="grid">
+  <div class="card featured">
+    <h3>🚀 Two-Tier Flask App on AWS EKS</h3>
+    <p><b>Repo:</b> <a href="https://github.com/AdiKanojiya/two-tier-flask-app" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
+    <p>Production-style two-tier Flask application deployed on AWS EKS using Kubernetes. Complete cluster setup, deployment scaling, and cleanup workflow with hands-on Kubernetes orchestration.</p>
+    <p><b>Tech:</b>Flask, MySQL, AWS EKS, Kubernetes, Docker</p>
+  </div>
+
+  <div class="card featured">
+    <h3>📊 K8s Voting App with Monitoring</h3>
+    <p><b>Repo:</b> <a href="https://github.com/AdiKanojiya/k8s-kind-voting-app" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
+    <p>Microservices voting application on a multi-node KIND cluster. Prometheus scrapes metrics from control-plane and worker nodes while Grafana visualizes cluster and application performance for complete observability.</p>
+    <p><b>Tech:</b> Microservices, KIND, Prometheus, Grafana, Kubernetes</p>
+  </div>
+</div>
+</section>
+
+<section id="projects">
+<h2>All Projects</h2>
+<div class="grid">
+
+<div class="card">
+<h3>🔐 Kubernetes Dashboard with RBAC</h3>
+<p><b>Repo:</b> <a href="https://github.com/AdiKanojiya/k8s-dashboard" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
+<p>Lightweight Kubernetes Dashboard setup with Role-Based Access Control (RBAC), Service Accounts, and ClusterRoleBinding. Includes all required YAML manifests for secure admin access and deployment in any cluster environment.</p>
+<p><b>Tech:</b> Kubernetes, RBAC, Service Accounts, YAML, Helm</p>
+</div>
+
+<div class="card">
+<h3>📝 Mini Django Notes App on K8s</h3>
+<p><b>Repo:</b> <a href="https://github.com/AdiKanojiya/mini-django-notes-app" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
+<p>Mini Django Notes application deployed on Kubernetes using Deployments, Services, and Containers. Perfect for learning K8s workloads, container orchestration, and networking with proper scaling capabilities.</p>
+<p><b>Tech:</b> Django, Kubernetes, Docker, Services, Deployments</p> 
+</div>
+
+<div class="card">
+<h3>📓 Full-Stack Django Notes App</h3>
+<p><b>Repo:</b> <a href="https://github.com/AdiKanojiya/django-notes-app" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
+<p>Complete full-stack Django Notes application with Python backend, MySQL database, and Nginx reverse proxy. Fully containerized with Docker for easy deployment and management with production-ready setup.</p>
+<p><b>Tech:</b> Django, MySQL, Nginx, Docker, DevOps</p>
+</div>
+
+<div class="card">
+<h3>💰 Expenses Tracker Web Application</h3>
+<p><b>Repo:</b> <a href="https://github.com/AdiKanojiya/expenses-tracker-webapp" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
+<p>Full-stack Expense Tracker application built in Java with Spring Boot backend, Thymeleaf frontend, and MySQL database. Containerized with Docker for simplified deployment and DevOps practice.</p>
+<p><b>Tech:</b> Java, Spring Boot, Thymeleaf, MySQL, Docker</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Education & Certifications</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Bachelor of Technology</h3>
+    <p>Computer Science, A.P.J Abdul Kalam Technical University , 2022</p>
+  </div>
+
+  <div class="card">
+    <h3>AWS Certified Cloud Practitioner</h3>
+    <p>Issued 2025</p>
+  </div>
+</div>
+</section>
+
+<section>
+<h2>Technical Skills</h2>
+
+<div class="skill-bar">
+<span>Linux - 80%</span>
+<div class="progress"><div style="width:80%"></div></div>
+</div>   
+
+<div class="skill-bar">
+<span>Docker - 75%</span>
+<div class="progress"><div style="width:75%"></div></div>
+</div>
+
+<div class="skill-bar">
+<span>AWS - 70%</span>
+<div class="progress"><div style="width:70%"></div></div>
+</div>
+
+<div class="skill-bar">
+<span>Kubernetes - 65%</span>
+<div class="progress"><div style="width:65%"></div></div>
+</div>
+
+</section>
+
+<section>
+<h2>What I Can Do For Your Company</h2>
+<div class="card">
+<ul>
+<li>Deploy scalable cloud applications</li>
+<li>Automate deployment workflows</li> 
+<li>Manage containerized applications</li>
+<li>Configure secure cloud infrastructure</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Contact</h2>
+<div class="card">
+<p>Email: aditya.kanojiya2503@gmail.com</p>
+<p>GitHub: https://github.com/AdiKanojiya</p>
+<p>LinkedIn: https://linkedin.com/in/aditya-kanojiya</p>
+<p>Phone: +91 7758870968 </p>
+<p>Location: Lucknow, India</p>
+</div>
+</section>
+
+<footer>
+© 2026 Aditya Kanojiya | DevOps Portfolio
+</footer>
+
+<script>
+function scrollToSection(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+ }
+</script>
+
+
+</body>
+</html>
