@@ -100,7 +100,6 @@ header p{margin-top:15px;font-size:22px;color:#a1e3ff;font-weight:500;position:r
 section{padding:80px 10%;position:relative;z-index:1}  
 section:nth-child(odd){background:rgba(22,163,226,0.02)}
 
-/* small floating circles for visual interest */
 section::before{content:'';position:absolute;top:10%;left:5%;width:60px;height:60px;border-radius:50%;background:rgba(34,211,238,0.1);animation:float 12s ease-in-out infinite;}
 section::after{content:'';position:absolute;bottom:15%;right:10%;width:80px;height:80px;border-radius:50%;background:rgba(236,72,153,0.1);animation:float 14s ease-in-out infinite;}
 
@@ -231,16 +230,23 @@ footer{
 <div class="grid">
   <div class="card featured">
     <h3>🚀 Two-Tier Flask App on AWS EKS</h3>
-    <p><b>Repo:</b> <a href="https://github.com/AdiKanojiya/two-tier-flask-app" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
+    <p><b>Repo:</b> <a href="https://github.com/Adikanojiya/two-tier-flask-app" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
     <p>Production-style two-tier Flask application deployed on AWS EKS using Kubernetes. Complete cluster setup, deployment scaling, and cleanup workflow with hands-on Kubernetes orchestration.</p>
-    <p><b>Tech:</b>Flask, MySQL, AWS EKS, Kubernetes, Docker</p>
+    <p><b>Tech:</b> Flask, MySQL, AWS EKS, Kubernetes, Docker</p>
   </div>
 
   <div class="card featured">
     <h3>📊 K8s Voting App with Monitoring</h3>
-    <p><b>Repo:</b> <a href="https://github.com/AdiKanojiya/k8s-kind-voting-app" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
+    <p><b>Repo:</b> <a href="https://github.com/Adikanojiya/k8s-kind-voting-app" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
     <p>Microservices voting application on a multi-node KIND cluster. Prometheus scrapes metrics from control-plane and worker nodes while Grafana visualizes cluster and application performance for complete observability.</p>
     <p><b>Tech:</b> Microservices, KIND, Prometheus, Grafana, Kubernetes</p>
+  </div>
+
+  <div class="card featured">
+    <h3>⚙️ Node Todo App with CI/CD on AWS</h3>
+    <p><b>Repo:</b> <a href="https://github.com/Adikanojiya/node-todo-app-cicd" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
+    <p>Dockerized Node.js Todo application deployed on AWS ECS using container images stored in Amazon ECR. Implemented IAM roles for secure access and integrated CloudWatch for real-time container log monitoring. Demonstrates a complete serverless container deployment workflow using AWS-native container services.</p>
+    <p><b>Tech:</b> Node.js, Docker, AWS ECS, Amazon ECR, IAM, CloudWatch</p>
   </div>
 </div>
 </section>
@@ -251,28 +257,28 @@ footer{
 
 <div class="card">
 <h3>🔐 Kubernetes Dashboard with RBAC</h3>
-<p><b>Repo:</b> <a href="https://github.com/AdiKanojiya/k8s-dashboard" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
+<p><b>Repo:</b> <a href="https://github.com/Adikanojiya/k8s-dashboard" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
 <p>Lightweight Kubernetes Dashboard setup with Role-Based Access Control (RBAC), Service Accounts, and ClusterRoleBinding. Includes all required YAML manifests for secure admin access and deployment in any cluster environment.</p>
 <p><b>Tech:</b> Kubernetes, RBAC, Service Accounts, YAML, Helm</p>
 </div>
 
 <div class="card">
 <h3>📝 Mini Django Notes App on K8s</h3>
-<p><b>Repo:</b> <a href="https://github.com/AdiKanojiya/mini-django-notes-app" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
+<p><b>Repo:</b> <a href="https://github.com/Adikanojiya/Mini-django-notes-app" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
 <p>Mini Django Notes application deployed on Kubernetes using Deployments, Services, and Containers. Perfect for learning K8s workloads, container orchestration, and networking with proper scaling capabilities.</p>
 <p><b>Tech:</b> Django, Kubernetes, Docker, Services, Deployments</p> 
 </div>
 
 <div class="card">
 <h3>📓 Full-Stack Django Notes App</h3>
-<p><b>Repo:</b> <a href="https://github.com/AdiKanojiya/django-notes-app" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
+<p><b>Repo:</b> <a href="https://github.com/Adikanojiya/django-notes-app" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
 <p>Complete full-stack Django Notes application with Python backend, MySQL database, and Nginx reverse proxy. Fully containerized with Docker for easy deployment and management with production-ready setup.</p>
 <p><b>Tech:</b> Django, MySQL, Nginx, Docker, DevOps</p>
 </div>
 
 <div class="card">
 <h3>💰 Expenses Tracker Web Application</h3>
-<p><b>Repo:</b> <a href="https://github.com/AdiKanojiya/expenses-tracker-webapp" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
+<p><b>Repo:</b> <a href="https://github.com/Adikanojiya/Expenses-Tracker-WebApp" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
 <p>Full-stack Expense Tracker application built in Java with Spring Boot backend, Thymeleaf frontend, and MySQL database. Containerized with Docker for simplified deployment and DevOps practice.</p>
 <p><b>Tech:</b> Java, Spring Boot, Thymeleaf, MySQL, Docker</p>
 </div>
@@ -281,16 +287,11 @@ footer{
 </section>
 
 <section>
-<h2>Education & Certifications</h2>
+<h2>Education</h2>
 <div class="grid">
   <div class="card">
     <h3>Bachelor of Technology</h3>
-    <p>Computer Science, A.P.J Abdul Kalam Technical University , 2022</p>
-  </div>
-
-  <div class="card">
-    <h3>AWS Certified Cloud Practitioner</h3>
-    <p>Issued 2025</p>
+    <p>Computer Science, A.P.J Abdul Kalam Technical University, 2022 – 2026</p>
   </div>
 </div>
 </section>
@@ -352,7 +353,6 @@ function scrollToSection(id){
   document.getElementById(id).scrollIntoView({behavior:'smooth'});
  }
 </script>
-
 
 </body>
 </html>
