@@ -184,10 +184,6 @@ footer{text-align:center;padding:30px;background:linear-gradient(135deg,#1e293b,
   padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600;
 }
 .card:hover .pipeline span{background:rgba(0,0,0,0.2);border-color:rgba(0,0,0,0.3);color:#000;}
- a{
-  color: inherit;
-  text-decoration: underline;
-}
 </style>
 </head>
 <body>
@@ -227,31 +223,40 @@ footer{text-align:center;padding:30px;background:linear-gradient(135deg,#1e293b,
   <!-- WanderLust MEGA PROJECT — NEW -->
   <div class="card mega featured">
     <h3>🌍 WanderLust — Production DevSecOps Pipeline</h3>
-    <p><b>Repo:</b> <a href="https://github.com/Adikanojiya/wanderlust-mega-" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
+    <p><b>Repo:</b> <a href="https://github.com/Adikanojiya/wanderlust-mega-project" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
     <p>Full production-grade Travel Blog app built on MERN stack with a complete DevSecOps CI/CD pipeline. CI runs on Jenkins with Trivy filesystem scan, SonarQube code quality check, OWASP dependency scan, Docker image build & scan, and DockerHub push. CD handled via GitOps — ArgoCD watches the repo and auto-deploys to AWS EKS on every change. Infrastructure provisioned entirely with Terraform (EKS cluster, node groups, Jenkins master/worker). Monitoring via Prometheus + Grafana with email alerts.</p>
-      <p><b>Tech:</b>MERN Stack , Jenkins CI/CD ,ArgoCD GitOps, Terraform IaC ,AWS EKS ,Trivy ,SonarQube , OWASP ,Prometheus,Grafana,Redis </p>
-      
+    <div class="pipeline">
+      <span>MERN Stack</span><span>Jenkins CI/CD</span><span>ArgoCD GitOps</span>
+      <span>Terraform IaC</span><span>AWS EKS</span><span>Trivy</span>
+      <span>SonarQube</span><span>OWASP</span><span>Prometheus</span><span>Grafana</span><span>Redis</span>
+    </div>
   </div>
 
   <div class="card featured">
     <h3>🚀 Two-Tier Flask App on AWS EKS</h3>
-    <p><b>Repo:</b> <a href="https://github.com/Adikanojiya/two-tier-flask-app" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
-    <p>Production-style two-tier Flask application deployed on AWS EKS using Kubernetes. Complete cluster setup, deployment scaling, and cleanup workflow with hands-on Kubernetes orchestration.</p>
-    <p><b>Tech:</b> Flask, MySQL, AWS EKS, Kubernetes, Docker</p>
+    <p><b>Repo:</b> <a href="https://github.com/Adikanojiya/two-tier-flask-app" target="_blank">GitHub</a></p>
+    <p>Production-style two-tier Flask application with MySQL backend deployed on AWS EKS using Kubernetes. Includes full cluster setup from scratch — node groups, networking, and IAM roles. Covers deployment manifests, service exposure, horizontal scaling, and complete teardown workflow. Demonstrates real-world Kubernetes orchestration on managed AWS infrastructure with hands-on EKS cluster lifecycle management.</p>
+    <div class="pipeline">
+      <span>Flask</span><span>MySQL</span><span>AWS EKS</span><span>Kubernetes</span><span>Docker</span><span>IAM</span><span>kubectl</span>
+    </div>
   </div>
 
   <div class="card featured">
     <h3>📊 K8s Voting App with Monitoring</h3>
-    <p><b>Repo:</b> <a href="https://github.com/Adikanojiya/k8s-kind-voting-app" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
-    <p>Microservices voting application on a multi-node KIND cluster. Prometheus scrapes metrics from control-plane and worker nodes while Grafana visualizes cluster and application performance for complete observability.</p>
-    <p><b>Tech:</b> Microservices, KIND, Prometheus, Grafana, Kubernetes</p>
+    <p><b>Repo:</b> <a href="https://github.com/Adikanojiya/k8s-kind-voting-app" target="_blank">GitHub</a></p>
+    <p>Microservices-based voting application deployed on a multi-node KIND (Kubernetes in Docker) cluster. Each service runs as an independent container — votes, results, worker, Redis queue, and PostgreSQL. Prometheus scrapes live metrics from both control-plane and worker nodes. Grafana dashboards visualize CPU, memory, request rates, and pod health for complete end-to-end observability of a real microservices system.</p>
+    <div class="pipeline">
+      <span>Microservices</span><span>KIND</span><span>Kubernetes</span><span>Prometheus</span><span>Grafana</span><span>Redis</span><span>PostgreSQL</span>
+    </div>
   </div>
 
   <div class="card featured">
     <h3>⚙️ Node Todo App with CI/CD on AWS</h3>
-    <p><b>Repo:</b> <a href="https://github.com/Adikanojiya/node-todo-app-cicd" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
-    <p>Dockerized Node.js Todo application deployed on AWS ECS using container images stored in Amazon ECR. Implemented IAM roles for secure access and integrated CloudWatch for real-time container log monitoring.</p>
-    <p><b>Tech:</b> Node.js, Docker, AWS ECS, Amazon ECR, IAM, CloudWatch</p>
+    <p><b>Repo:</b> <a href="https://github.com/Adikanojiya/node-todo-app-cicd" target="_blank">GitHub</a></p>
+    <p>Dockerized Node.js Todo application with a complete serverless container deployment on AWS. Docker images are built and pushed to Amazon ECR, then deployed via AWS ECS Fargate — no server management needed. IAM roles configured for least-privilege secure access between services. CloudWatch integrated for real-time container log monitoring and alerting. Demonstrates a full AWS-native CI/CD workflow without any Kubernetes overhead.</p>
+    <div class="pipeline">
+      <span>Node.js</span><span>Docker</span><span>AWS ECS</span><span>Amazon ECR</span><span>IAM</span><span>CloudWatch</span><span>Fargate</span>
+    </div>
   </div>
 
 </div>
@@ -263,30 +268,38 @@ footer{text-align:center;padding:30px;background:linear-gradient(135deg,#1e293b,
 
 <div class="card">
 <h3>🔐 Kubernetes Dashboard with RBAC</h3>
-<p><b>Repo:</b> <a href="https://github.com/Adikanojiya/k8s-dashboard" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
-<p>Lightweight Kubernetes Dashboard setup with Role-Based Access Control (RBAC), Service Accounts, and ClusterRoleBinding. Includes all required YAML manifests for secure admin access and deployment in any cluster environment.</p>
-<p><b>Tech:</b> Kubernetes, RBAC, Service Accounts, YAML, Helm</p>
+<p><b>Repo:</b> <a href="https://github.com/Adikanojiya/k8s-dashboard" target="_blank">GitHub</a></p>
+<p>Lightweight Kubernetes Dashboard setup secured with Role-Based Access Control (RBAC). Configured Service Accounts and ClusterRoleBinding to grant scoped admin access without exposing the cluster. Includes all required YAML manifests — no Helm chart dependency — so it deploys cleanly on any cluster environment. Ideal for learning how Kubernetes authentication and authorization work in a real setup.</p>
+<div class="pipeline">
+  <span>Kubernetes</span><span>RBAC</span><span>Service Accounts</span><span>ClusterRoleBinding</span><span>YAML</span><span>Helm</span>
+</div>
 </div>
 
 <div class="card">
 <h3>📝 Mini Django Notes App on K8s</h3>
-<p><b>Repo:</b> <a href="https://github.com/Adikanojiya/Mini-django-notes-app" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
-<p>Mini Django Notes application deployed on Kubernetes using Deployments, Services, and Containers. Perfect for learning K8s workloads, container orchestration, and networking with proper scaling capabilities.</p>
-<p><b>Tech:</b> Django, Kubernetes, Docker, Services, Deployments</p>
+<p><b>Repo:</b> <a href="https://github.com/Adikanojiya/Mini-django-notes-app" target="_blank">GitHub</a></p>
+<p>Django Notes application containerized and deployed on Kubernetes using Deployments and Services. Focuses on understanding K8s core workloads — how pods are scheduled, how services expose applications inside the cluster, and how container networking works. Includes scaling configuration and rolling update strategy. Built specifically for practicing DevOps fundamentals with a real application rather than toy examples.</p>
+<div class="pipeline">
+  <span>Django</span><span>Kubernetes</span><span>Docker</span><span>Deployments</span><span>Services</span><span>Python</span>
+</div>
 </div>
 
 <div class="card">
 <h3>📓 Full-Stack Django Notes App</h3>
-<p><b>Repo:</b> <a href="https://github.com/Adikanojiya/django-notes-app" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
-<p>Complete full-stack Django Notes application with Python backend, MySQL database, and Nginx reverse proxy. Fully containerized with Docker for easy deployment and management with production-ready setup.</p>
-<p><b>Tech:</b> Django, MySQL, Nginx, Docker, DevOps</p>
+<p><b>Repo:</b> <a href="https://github.com/Adikanojiya/django-notes-app" target="_blank">GitHub</a></p>
+<p>Complete full-stack Django Notes application with Python backend, MySQL database, and Nginx as a reverse proxy — all running as separate Docker containers orchestrated with Docker Compose. Nginx handles incoming traffic and forwards to the Django app server, which reads and writes to a persistent MySQL volume. Production-ready setup demonstrating multi-container architecture, volume management, and network configuration in Docker.</p>
+<div class="pipeline">
+  <span>Django</span><span>MySQL</span><span>Nginx</span><span>Docker</span><span>Docker Compose</span><span>Python</span>
+</div>
 </div>
 
 <div class="card">
 <h3>💰 Expenses Tracker Web Application</h3>
-<p><b>Repo:</b> <a href="https://github.com/Adikanojiya/Expenses-Tracker-WebApp" target="_blank" style="color:inherit;text-decoration:underline;">GitHub</a></p>
-<p>Full-stack Expense Tracker application built in Java with Spring Boot backend, Thymeleaf frontend, and MySQL database. Containerized with Docker for simplified deployment and DevOps practice.</p>
-<p><b>Tech:</b> Java, Spring Boot, Thymeleaf, MySQL, Docker</p>
+<p><b>Repo:</b> <a href="https://github.com/Adikanojiya/Expenses-Tracker-WebApp" target="_blank">GitHub</a></p>
+<p>Full-stack Expense Tracker built with Java Spring Boot backend and Thymeleaf server-side rendered frontend, with MySQL for persistent storage. The entire application is containerized with Docker — database, backend, and frontend all in one compose setup. Includes CRUD operations for expense management with category tracking. Demonstrates DevOps practices applied to a Java ecosystem project, including Dockerfile authoring and container networking.</p>
+<div class="pipeline">
+  <span>Java</span><span>Spring Boot</span><span>Thymeleaf</span><span>MySQL</span><span>Docker</span><span>Docker Compose</span>
+</div>
 </div>
 
 </div>
@@ -342,8 +355,9 @@ footer{text-align:center;padding:30px;background:linear-gradient(135deg,#1e293b,
 <section>
 <h2>Contact</h2>
 <div class="card">
-<p>Email: <a href="mailto:aditya.kanojiya2503@gmail.com">aditya.kanojiya2503@gmail.com</a></p>
-<p>GitHub: <a href="https://github.com/Adikanojiya" target="_blank">https://github.com/Adikanojiya</a></p>
+<p>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4f2e2b263b362e61242e21202526362e7d7a7f7c0f28222e2623612c2022">[email&#160;protected]</a></p>
+<p>GitHub: https://github.com/Adikanojiya</p>
+<p>LinkedIn: https://linkedin.com/in/aditya-kanojiya</p>
 <p>Phone: +91 7758870968</p>
 <p>Location: Lucknow, India</p>
 </div>
@@ -353,11 +367,4 @@ footer{text-align:center;padding:30px;background:linear-gradient(135deg,#1e293b,
 © 2026 Aditya Kanojiya | DevOps Portfolio
 </footer>
 
-<script>
-function scrollToSection(id){
-  document.getElementById(id).scrollIntoView({behavior:'smooth'});
-}
-</script>
-
-</body>
-</html>
+<sc
